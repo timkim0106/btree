@@ -44,3 +44,8 @@ cmake_install.cmake
 *.su
 *.idb
 *.pdb
+
+# Local documentation files
+GETTING_STARTED.md
+ROADMAP.md
+READMEREAL.md
