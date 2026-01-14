@@ -9,7 +9,9 @@ private:
     int numKeys;       // Current number of keys
     bool isLeaf;       // True if node is a leaf
     std::string *values; // string data associated with keys (for leaf nodes)
-    int maxDegree;    // range for number of keys
+    int t;    // Minimum degree
+
+    friend class BTree;
 
 public:
     BTreeNode(int degree, bool leaf); // constructor
@@ -22,7 +24,8 @@ public:
     void insertNonFull(int key, const std::string &value);
     void splitChild(int i, BTreeNode *y);
     void traverse();
-    BTreeNode* search(int key);
+
+    BTreeNode* search(int key, std::string &value);
     //void remove(int key);
    // void removeFromLeaf(int idx);
    // void removeFromNonLeaf(int idx);
